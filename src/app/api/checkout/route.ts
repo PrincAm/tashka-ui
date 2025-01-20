@@ -1,13 +1,11 @@
-import { NextResponse, NextRequest } from 'next/server';
+import { NextResponse } from 'next/server';
 import Stripe from 'stripe';
 
 const stripe = new Stripe(process.env.NEXT_STRIPE_API_KEY || '');
 
 const YOUR_DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'http://localhost:3000';
 
-export async function POST(request: NextRequest): Promise<NextResponse> {
-  const data = await request.json();
-
+export async function POST(): Promise<NextResponse> {
   try {
     const session = await stripe.checkout.sessions.create({
       shipping_options: [

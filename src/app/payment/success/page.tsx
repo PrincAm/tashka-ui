@@ -50,15 +50,15 @@ export default function SuccessfulPayment() {
           </div>
 
           <div className="bg-gray-50 p-4 rounded-lg space-y-4">
-            <h3 className="font-semibold text-gray-800">What's Next?</h3>
+            <h3 className="font-semibold text-gray-800">What`&apos;s Next?</h3>
             <ul className="space-y-2">
               <li className="flex items-center text-gray-600">
                 <Package className="w-5 h-5 mr-2 text-pink-500" />
-                We're preparing your items for shipment
+                We`&apos;re preparing your items for shipment
               </li>
               <li className="flex items-center text-gray-600">
                 <Truck className="w-5 h-5 mr-2 text-pink-500" />
-                You'll receive a shipping confirmation email soon
+                You`&apos;ll receive a shipping confirmation email soon
               </li>
             </ul>
           </div>

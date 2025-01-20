@@ -10,7 +10,7 @@ const NoProducts = () => (
         No Products Found
       </h3>
       <p className="text-gray-600">
-        We couldn't find any products matching your current filters. Try
+        We couldn&apos;t find any products matching your current filters. Try
         adjusting your search or browse our full collection.
       </p>
     </CardContent>

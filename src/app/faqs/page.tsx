@@ -33,7 +33,7 @@ export default function FAQsPage() {
           <AccordionContent>
             While many of our bags are water-resistant, not all are fully
             waterproof. Please check the product description for specific
-            details on each bag's water resistance level.
+            details on each bag`&apos;s water resistance level.
           </AccordionContent>
         </AccordionItem>
         <AccordionItem value="item-4">

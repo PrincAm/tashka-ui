@@ -12,7 +12,7 @@ const NotFoundProduct = () => (
           Product Not Found
         </h2>
         <p className="mt-2 text-gray-500">
-          We couldn't find the product you're looking for.
+          We couldn`&apos;t find the product you`&apos;re looking for.
         </p>
       </CardContent>
       <CardFooter className="justify-center">

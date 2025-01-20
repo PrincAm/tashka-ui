@@ -49,8 +49,8 @@ export default function SizeGuidePage() {
       </div>
       <p className="mt-4 text-sm text-gray-600">
         Note: Measurements may vary slightly due to the handmade nature of our
-        products. If you're between sizes, we recommend choosing the larger size
-        for a more comfortable fit.
+        products. If you`&apos;re between sizes, we recommend choosing the
+        larger size for a more comfortable fit.
       </p>
     </div>
   );
