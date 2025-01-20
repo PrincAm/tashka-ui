@@ -1,9 +1,7 @@
 import { NextResponse, NextRequest } from 'next/server';
 import Stripe from 'stripe';
 
-const stripe = new Stripe(
-  'sk_test_51QM7072KAXLcvsyMjSPIl4Ev8s6w0vaqmCCgMQWtmpUD7SafHFi78Wz35iB1hBcsF45PXj1bxDGDHNVat9leznpd003xGhD4oa'
-);
+const stripe = new Stripe(process.env.NEXT_STRIPE_API_KEY || '');
 
 const YOUR_DOMAIN = process.env.NEXT_PUBLIC_DOMAIN || 'http://localhost:3000';
 
