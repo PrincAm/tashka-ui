@@ -1,36 +1,115 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tashka.cz - Modern E-commerce Platform
+
+![Tashka.cz Homepage](https://res.cloudinary.com/dznxs2k2a/image/upload/v1737449194/tashka/homepage_vtfi3b.png)
+
+[Live Demo](https://tashka-ui-yo7e.vercel.app/)
+
+## Overview
+
+Tashka.cz is a modern e-commerce platform specializing in stylish bags for women, men, and kids. Built with Next.js 14 and featuring a sleek, responsive design, the platform offers an intuitive shopping experience with a focus on visual appeal and user convenience.
+
+## Features
+
+- 🛍️ **Modern E-commerce Experience**
+  - Responsive product grid with hover effects
+  - Detailed product pages with image carousels
+  - Quick view functionality
+  - Advanced filtering and sorting options
+
+- 🛒 **Shopping Cart**
+  - Real-time cart updates
+  - Quantity adjustment
+  - Persistent cart state
+  - Smooth animations
+
+- 📱 **Responsive Design**
+  - Mobile-first approach
+  - Adaptive layouts
+  - Touch-friendly interfaces
+  - Optimized images
+
+- ⚡ **Performance**
+  - Server-side rendering
+  - Image optimization
+  - Lazy loading
+  - Route prefetching
+
+## Tech Stack
+
+- **Frontend Framework**: Next.js 14
+- **Styling**: Tailwind CSS
+- **UI Components**: shadcn/ui
+- **State Management**: React Context
+- **Payment Processing**: Stripe
+- **Deployment**: Vercel
 
 ## Getting Started
 
-First, run the development server:
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/tashka-ui.git
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+2. Install dependencies:
+   ```bash
+   npm install
+
+3. Create a `.env.local` file with the following variables::
+   ```bash
+   NEXT_PUBLIC_STRIPE_PUBLISHABLE_KEY=your_stripe_publishable_key
+   STRIPE_SECRET_KEY=your_stripe_secret_key
+
+4. Install dependencies:
+   ```bash
+   npm run dev
+   
+5. Open [http://localhost:3000](http://localhost:3000) in your browser.
+
+## Project Structure
+
+```plaintext
+tashka-ui/
+├── app/
+│   ├── components/
+│   ├── context/
+│   ├── hooks/
+│   └── pages/
+├── public/
+└── styles/
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Key Components
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- **ProductCard**: Displays individual products with hover effects and quick view
+- **ProductDetail**: Shows detailed product information with image carousel
+- **Cart**: Manages shopping cart functionality
+- **Checkout**: Handles the checkout process
+- **Layout**: Provides consistent page structure
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Pages
 
-## Learn More
+- `/`: Homepage with featured products
+- `/products`: Product listing page
+- `/products/[id]`: Individual product pages
+- `/cart`: Shopping cart
+- `/checkout`: Checkout process
+- `/success`: Order confirmation
+- `/faqs`: Frequently asked questions
+- `/shipping-returns`: Shipping and returns policy
+- `/size-guide`: Size guide
+- `/care-instructions`: Product care instructions
 
-To learn more about Next.js, take a look at the following resources:
+## Contributing
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+1. Fork the repository
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact
 
-## Deploy on Vercel
+For any inquiries, please reach out to us at [support@tashka.cz](mailto:support@tashka.cz)
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+---
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+Made with ❤️ by Adam
