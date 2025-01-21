@@ -10,9 +10,9 @@ interface ProductWithPrices extends Stripe.Product {
 
 export async function GET(
   request: NextRequest,
-  { params }: { params: { id: string } }
+  context: { params: Promise<{ id: string }> }
 ): Promise<NextResponse> {
-  const { id } = await params;
+  const { id } = await context.params;
 
   if (!id) {
     return NextResponse.json(

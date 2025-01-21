@@ -1,13 +1,16 @@
+import type { Metadata } from 'next';
+
 import { dehydrate, hydrate, QueryClient } from '@tanstack/react-query';
 
 import ProductDetailContainer from '@/app/components/ProductDetailContainer';
 import { fetchProduct } from '@/utils/api';
 
-export default async function ProductDetailPage({
-  params,
-}: {
-  params: { id: string };
-}) {
+type Props = {
+  params: Promise<{ id: string }>;
+  searchParams: Promise<{ [key: string]: string | string[] | undefined }>;
+};
+
+export default async function ProductDetailPage({ params }: Props) {
   const { id } = await params;
   const queryClient = new QueryClient();
 
@@ -28,8 +31,8 @@ export default async function ProductDetailPage({
   );
 }
 
-export async function generateMetadata({ params }: { params: { id: string } }) {
-  const { id } = await params;
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const id = (await params).id;
 
   try {
     const product = await fetchProduct(id);

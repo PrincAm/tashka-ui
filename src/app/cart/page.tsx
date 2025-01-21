@@ -2,6 +2,7 @@
 
 import Link from 'next/link';
 import { Minus, Plus, X, ShoppingBag } from 'lucide-react';
+import Image from 'next/image';
 
 import { Button } from '@/components/ui/button';
 import {
@@ -30,9 +31,6 @@ export default function Cart() {
   const { handleCheckout } = useCheckout();
 
   const total = getTotalItems();
-
-  console.log('CART');
-  console.log(cart);
 
   return (
     <Card className="w-full max-w-2xl mx-auto my-16">
@@ -64,7 +62,7 @@ export default function Cart() {
                   key={id}
                   className="flex items-center space-x-4 py-4 border-b border-gray-200 last:border-b-0"
                 >
-                  <img
+                  <Image
                     src={product?.images[0]}
                     alt={product?.name}
                     className="w-16 h-16 object-cover rounded"
