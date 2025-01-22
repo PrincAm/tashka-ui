@@ -2,7 +2,7 @@
 
 ![Tashka.cz Homepage](https://res.cloudinary.com/dznxs2k2a/image/upload/v1737449194/tashka/homepage_vtfi3b.png)
 
-[Live Demo](https://tashka-ui-yo7e.vercel.app/)
+[Live Demo](https://tashka-ui.vercel.app/)
 
 ## Overview
 

@@ -33,9 +33,6 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
 
   const { id, name, prices, images, metadata, description } = product;
 
-  console.log('PRICES');
-  console.log(prices);
-
   const price = prices[0].unit_amount;
 
   const handleAddToCart = () => {
