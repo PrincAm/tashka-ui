@@ -39,14 +39,14 @@ const InstagramSection = () => {
             {images.map((src, index) => (
               <div
                 key={index}
-                className="aspect-square relative w-full overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer"
+                className="aspect-square relative w-full overflow-hidden rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 cursor-pointer rounded-lg"
               >
                 <Image
                   src={src}
                   alt={`Instagram Post ${index}`}
-                  layout="fill"
-                  objectFit="cover"
-                  className="rounded-lg"
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                  className="object-cover"
                 />
               </div>
             ))}

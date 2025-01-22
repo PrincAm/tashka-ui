@@ -39,8 +39,9 @@ const HeroSection = ({ collectionRef }: HeroSectionProps) => {
               alt="Stylish bags for all"
               width={600}
               height={400}
-              layout="responsive"
+              priority
               className="rounded-lg shadow-2xl"
+              style={{ width: '100%', height: 'auto' }} // Maintains aspect ratio
             />
             <div className="absolute -bottom-6 -left-6 bg-purple-400 text-white text-xl font-bold p-4 rounded-full transform rotate-12">
               New Arrivals!

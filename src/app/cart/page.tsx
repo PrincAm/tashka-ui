@@ -62,11 +62,15 @@ export default function Cart() {
                   key={id}
                   className="flex items-center space-x-4 py-4 border-b border-gray-200 last:border-b-0"
                 >
-                  <Image
-                    src={product?.images[0]}
-                    alt={product?.name}
-                    className="w-16 h-16 object-cover rounded"
-                  />
+                  <div className="relative w-16 h-16">
+                    <Image
+                      src={product?.images[0]}
+                      alt={product?.name}
+                      fill
+                      className="object-cover rounded"
+                      sizes="64px"
+                    />
+                  </div>
                   <div className="flex-grow">
                     <h3 className="text-lg font-semibold text-gray-800">
                       {product?.name}

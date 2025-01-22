@@ -150,13 +150,13 @@ const ProductDetail = (product: Product) => {
                 <div className="embla__container flex">
                   {images.map((src, index) => (
                     <div key={index} className="embla__slide flex-[0_0_100%]">
-                      <div className="relative h-96 md:h-[500px]">
+                      <div className="relative h-96 md:h-[500px] rounded-lg">
                         <Image
                           src={src}
                           alt={`${name} - Image ${index + 1}`}
-                          layout="fill"
-                          objectFit="cover"
-                          className="rounded-lg"
+                          fill
+                          sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 33vw"
+                          className="object-cover"
                         />
                       </div>
                     </div>

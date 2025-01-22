@@ -64,9 +64,9 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
           <Image
             src={images[0]}
             alt={name}
-            layout="fill"
-            objectFit="cover"
-            className="transition-transform duration-300 group-hover:scale-110"
+            fill
+            sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            className="transition-transform duration-300 group-hover:scale-110 object-cover"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-gray-900 to-transparent opacity-0 group-hover:opacity-70 transition-opacity duration-300"></div>
           <Button
@@ -113,13 +113,15 @@ const ProductCard: FC<ProductCardProps> = ({ product }) => {
           </DialogHeader>
           <div className="grid gap-4 py-4">
             <div className="grid grid-cols-4 items-center gap-4">
-              <Image
-                src={images[0]}
-                alt={name}
-                layout="responsive"
-                width={16}
-                height={9}
-              />
+              <div className="relative aspect-w-16 aspect-h-9">
+                <Image
+                  src={images[0]}
+                  alt={name}
+                  fill
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 75vw, 50vw"
+                  className="object-contain"
+                />
+              </div>
               <div className="col-span-3">
                 <h4 className="font-semibold">{name}</h4>
                 <p className="text-sm text-gray-500">{price?.toFixed(2)} Kč</p>
