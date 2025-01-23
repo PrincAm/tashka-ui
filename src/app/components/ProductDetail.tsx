@@ -45,8 +45,6 @@ const ProductDetail = (product: Product) => {
       return;
     }
 
-    console.log(validQuantity);
-
     addToCart({
       id,
       name,

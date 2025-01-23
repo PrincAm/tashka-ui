@@ -31,7 +31,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
       if (existingItem) {
         return prevCart.map((item) =>
           item.id === cartItem.id
-            ? { ...item, quantity: item.quantity + cartItem.quantity }
+            ? { ...item, quantity: item.quantity + 1 }
             : item
         );
       }
@@ -63,6 +63,7 @@ export const CartContextProvider = ({ children }: { children: ReactNode }) => {
   // Clear the entire cart
   const clearCart = () => setCart([]);
 
+  // TODO remove if not used
   const getTotalItems = () => {
     return cart.reduce((total, item) => total + item.quantity, 0);
   };
